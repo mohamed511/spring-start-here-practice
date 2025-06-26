@@ -1,1 +1,8 @@
 .DS_Store
+.idea/compiler.xml
+.idea/encodings.xml
+.idea/jarRepositories.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/spring-start-here-practice.iml
+.idea/vcs.xml
