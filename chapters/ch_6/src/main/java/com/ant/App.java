@@ -1,17 +1,18 @@
 package com.ant;
 
-import org.springframework.beans.factory.config.BeanDefinitionCustomizer;
+import com.ant.sq_ch6_ex1.Comment;
+import com.ant.sq_ch6_ex1.CommentService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
-import java.util.List;
-import java.util.Map;
-import java.util.function.Supplier;
 
 /**
  * Hello world!
  */
 public class App {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        var c = new AnnotationConfigApplicationContext(ProjectConfig.class);
+        var commentService = c.getBean(CommentService.class);
+        Comment comment = new Comment("This is a great book!", "John Doe");
+        commentService.publishComment(comment);
+        commentService.test(comment);
     }
 }
