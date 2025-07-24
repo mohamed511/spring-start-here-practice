@@ -1,4 +1,4 @@
-package com.ant.sq_ch6_ex1;
+package com.ant;
 
 public class Comment {
     private String text;
@@ -26,5 +26,13 @@ public class Comment {
 
     public void setAuthor(String author) {
         this.author = author;
+    }
+
+    @Override
+    public String toString() {
+        return "Comment{" +
+                "text='" + text + '\'' +
+                ", author='" + author + '\'' +
+                '}';
     }
 }
